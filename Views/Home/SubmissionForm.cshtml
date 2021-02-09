@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Assignment4.Models.Submission
+
+<!--This web page displays a form where a user can submit a restaurant as a suggestion for the anonymous client-->
+<div class="container">
+    <div class="text-success">
+        <h3>Enter Restaurant Information Below: </h3>
+    </div>
+    <div class="m-sm-5">
+        <form asp-action="SubmissionForm" method="post" id="restaurantForm">
+            <div class="d-flex flex-row">
+                <label asp-for="Name">Name: </label>
+                <div class="m-sm-1" style="padding-left:150px">
+                    <input asp-for="Name" />
+                </div>
+            </div>
+            <br />
+            <div class="d-flex flex-row">
+                <label asp-for="RestaurantName">Restaurant Name: </label>
+                <div class="m-sm-1" style="padding-left:70px">
+                    <input asp-for="RestaurantName" />
+                </div>
+            </div>
+            <br />
+            <div class="d-flex flex-row">
+                <label asp-for="FavoriteDish">Favorite Dish: </label>
+                <div class="m-sm-1" style="padding-left:100px">
+                    <input asp-for="FavoriteDish" />
+                </div>
+            </div>
+            <br />
+            <div class="d-flex flex-row">
+                <label asp-for="PhoneNumber">Restaurant Phone Number: </label>
+                <div class="m-sm-1" style="padding-left:5px">
+                    <input asp-for="PhoneNumber" />
+                </div>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-success">Submit Restaurant</button>
+            <br />
+            <br />
+            <div asp-validation-summary="All"></div>
+        </form>
+    </div>
+</div>

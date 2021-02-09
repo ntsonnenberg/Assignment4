@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model IEnumerable<Assignment4.Models.Submission>
+
+<!--This web page displays all the user submission of restaurant recommendations for the anonymous client to see-->
+<div class="container">
+    <div class="text-success">
+        <h3>Restaurant Submission List</h3>
+    </div>
+    <div class="m-sm-5">
+        <table>
+            <thead class="text-success">
+                <tr>
+                    <th class="p-sm-3">Name</th>
+                    <th class="p-sm-3">Restaurant Name</th>
+                    <th class="p-sm-3">Favorite Dish</th>
+                    <th class="p-sm-3">Restaurant Phone Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Assignment4.Models.Submission sub in Model)
+                {
+                    <tr>
+                        <td class="p-sm-3">@sub.Name</td>
+                        <td class="p-sm-3">@sub.RestaurantName</td>
+                        <td class="p-sm-3">@sub.FavoriteDish</td>
+                        <td class="p-sm-3">@sub.PhoneNumber</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
